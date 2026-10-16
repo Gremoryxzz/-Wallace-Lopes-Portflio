@@ -1,132 +1,121 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallace Lopes | Desenvolvedor Full Stack</title>
-
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wallace Lopes · Desenvolvedor Full Stack</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<canvas id="stars" aria-hidden="true"></canvas>
 <header>
-    <div class="header-content">
-
-        <img src="Fotos/foto 3x4 wallace (1).png" alt="Wallace Lopes" class="profile-img">
-
-        <h1>Wallace Lopes da Silva</h1>
-        <p id="typing"></p>
-
-        <!-- SETA -->
-        <a href="#about" class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-
-    </div>
+  <b>Wallace Lopes</b>
+  <nav><a href="#sobre">Sobre</a><a href="#experiencia">Experiência</a><a href="#projetos">Projetos</a><a href="#contato">Contate-me</a></nav>
+  <div class="ctl"><button id="idioma" aria-label="Mudar idioma">EN</button><button id="tema" aria-label="Alternar tema claro e escuro">☾</button></div>
 </header>
+<main>
+<section class="hero" id="inicio">
+  <span class="badge"><i></i>Aberto a oportunidades</span>
+  <h1>Wallace Lopes</h1>
+  <p class="role"><b>Desenvolvedor Full Stack</b> <span>· Belford Roxo, RJ</span></p>
+  <div class="chips"><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">Java</span><span class="chip">Spring Boot</span></div>
+</section>
 
-<nav>
-    <a href="#about">Sobre</a>
-    <a href="#projects">Projetos</a>
-    <a href="#skills">Habilidades</a>
-    <a href="#contact">Contato</a>
-</nav>
+<section id="sobre">
+  <h2>Sobre mim</h2>
+  <div class="about">
+    <img class="avatar" src="foto.jpg" alt="Foto de Wallace Lopes" width="240" height="240">
+    <div>
+      <p>Sou desenvolvedor full stack graduado em Análise e Desenvolvimento de Sistemas pela Estácio. Faço sites e sistemas para negócios locais desde 2024, cuidando de tudo: da arquitetura à entrega final.</p>
+      <p>Trabalho com suporte técnico na área de saúde, o que me dá o olhar de quem usa o sistema no dia a dia. Uso o Claude Code todos os dias para desenhar a arquitetura e acelerar as entregas. Estou aprofundando Java com Spring Boot, arquitetura de sistemas e nuvem, e busco minha primeira posição como desenvolvedor.</p>
+      <div class="chips" style="justify-content:flex-start;margin-top:22px">
+        <span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Python</span><span class="chip">SQL / MySQL</span><span class="chip">Supabase</span><span class="chip">Git e GitHub</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-<main class="container">
+<section id="experiencia">
+  <h2>Experiência</h2>
+  <div class="tl">
+    <article>
+      <div class="when">jul. de 2026 – atual</div>
+      <h3>Técnico de suporte</h3>
+      <p class="org">A4PM · Duque de Caxias, RJ</p>
+      <p class="d">Suporte de campo e ao usuário em ambiente corporativo de saúde, resolvendo problemas de software e infraestrutura.</p>
+    </article>
+    <article>
+      <div class="when">fev. de 2024 – atual</div>
+      <h3>Desenvolvedor web freelancer</h3>
+      <p class="org">Projetos independentes · Remoto</p>
+      <p class="d">Desenvolvimento full stack de sites e sistemas para negócios locais, com APIs, banco de dados, autenticação e painéis administrativos.</p>
+      <div class="chips" style="justify-content:flex-start"><span class="chip">JavaScript</span><span class="chip">Supabase</span><span class="chip">APIs REST</span></div>
+    </article>
+    <article>
+      <div class="when">Concluído</div>
+      <h3>Análise e Desenvolvimento de Sistemas</h3>
+      <p class="org">Estácio</p>
+      <p class="d">Graduação tecnológica com foco em desenvolvimento de sistemas, banco de dados, lógica de programação e arquitetura de software.</p>
+    </article>
+  </div>
+</section>
 
-    <section id="about" class="section">
-        <h2>Sobre Mim</h2>
-        <p>
-            Sou desenvolvedor Full Stack apaixonado por tecnologia e criação de 
-interfaces modernas. Trabalho com HTML, CSS, JavaScript e também no 
-desenvolvimento back-end com Node.js e Java.
+<section id="projetos">
+  <h2>Projetos</h2>
+  <p class="sub">Sistemas que projetei e desenvolvi, do front-end ao deploy.</p>
+  <div class="grid">
+    <div class="card feat">
+      <span class="destaque">Destaque · Projeto real</span>
+      <h3>Desejo Rosa</h3>
+      <p>Loja virtual completa de lingerie, pronta para vender: do cadastro de produtos ao pagamento e à entrega.</p>
+      <ul class="hl">
+        <li>Painel administrativo com controle de estoque</li>
+        <li>Login e autenticação de usuários</li>
+        <li>Pagamento integrado via Mercado Pago</li>
+        <li>Rastreamento de pedidos e cálculo de frete por CEP</li>
+      </ul>
+      <div class="chips" style="justify-content:flex-start"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Supabase</span><span class="chip">Mercado Pago</span></div>
+      <div class="links"><a href="https://desejo-rosa.vercel.app/" target="_blank" rel="noopener">Ver ao vivo ↗</a></div>
+    </div>
+    <div class="card">
+      <span class="tag">Dados e IA</span>
+      <h3>Libris</h3>
+      <p>Recomenda livros de forma personalizada, cruzando dados das APIs Google Books e Open Library com Machine Learning e NLP.</p>
+      <div class="chips" style="justify-content:flex-start"><span class="chip">Python</span><span class="chip">Machine Learning</span><span class="chip">NLP</span></div>
+      <div class="links"><a href="https://github.com/Gremoryxzz/libris/tree/master" target="_blank" rel="noopener">Ver código ↗</a></div>
+    </div>
+    <div class="card">
+      <span class="tag">Produtividade</span>
+      <h3>FolhaPonto</h3>
+      <p>Folha de ponto para registrar entrada, saída e pausas, com histórico e cálculo automático das horas trabalhadas.</p>
+      <div class="chips" style="justify-content:flex-start"><span class="chip">React</span><span class="chip">TypeScript</span></div>
+      <div class="links"><a href="https://github.com/Gremoryxzz/FolhaPonto" target="_blank" rel="noopener">Ver código ↗</a></div>
+    </div>
+    <div class="card">
+      <span class="tag">Mobile</span>
+      <h3>App para igreja</h3>
+      <p>Aplicativo para a comunidade de uma igreja, com login, perfil, troca de senha e chat entre usuários.</p>
+      <div class="chips" style="justify-content:flex-start"><span class="chip">Mobile</span><span class="chip">Firebase</span></div>
+      <div class="links"><a href="https://github.com/Gremoryxzz/appIgreja" target="_blank" rel="noopener">Ver código ↗</a></div>
+    </div>
+  </div>
+</section>
 
-Gosto de transformar ideias em aplicações funcionais, sempre buscando 
-performance, organização de código e uma boa experiência para o usuário.
-Estou em constante evolução, estudando e aplicando novas soluções no dia a dia.
-        </p>
-    </section>
-
-    <section id="projects" class="section">
-        <h2>Projetos</h2>
-        <div class="projects">
-
-            <div class="project-card">
-                <h3>Portfólio</h3>
-                <p>Site moderno responsivo.</p>
-                <button onclick="abrirProjeto('https://github.com')">Ver Projeto</button>
-            </div>
-
-            <div class="project-card">
-                <h3>Sistema CRUD</h3>
-                <p>Aplicação com integração front e back-end.</p>
-                <button onclick="abrirProjeto('https://github.com')">Ver Projeto</button>
-            </div>
-
-            <div class="project-card">
-                <h3>API Backend</h3>
-                <p>API com Node.js.</p>
-                <button onclick="abrirProjeto('https://github.com')">Ver Projeto</button>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <h2>Habilidades</h2>
-
-        <h3>Front-End</h3>
-        <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>React</span>
-        </div>
-
-        <h3>Back-End</h3>
-        <div class="skills">
-            <span>Node.js</span>
-            <span>Java</span>
-            <span>Banco de Dados</span>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Contato</h2>
-
-        <div class="social">
-
-            <a href="mailto:seuemail@gmail.com" class="email-btn">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-
-            <a href="https://www.linkedin.com/in/wallace-lopes-3926aa343/" target="_blank" class="linkedin-btn">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-
-            <a href="https://github.com/Gremoryxzz" target="_blank" class="github-btn">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-
-            <a href="https://wa.me/5521973254935" target="_blank" class="whatsapp-btn">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
-
-            <a href="https://instagram.com/wallace_gremoryx" target="_blank" class="instagram-btn">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-
-        </div>
-    </section>
-
+<section id="contato">
+  <h2>Contate-me</h2>
+  <div class="contact">
+    <p>Vamos conversar sobre uma oportunidade ou projeto? Fico à disposição!</p>
+    <p class="mail" id="email">wallacegremory@gmail.com</p>
+    <div class="row">
+      <a href="https://wa.me/5521973254935" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.linkedin.com/in/wallace-lopes-dev/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Gremoryxzz" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p style="margin:22px 0 0;font-size:15px">(21) 97325-4935 · Belford Roxo, RJ</p>
+  </div>
+</section>
 </main>
-
-<footer>
-    <p>&copy; 2026 Wallace Lopes da Silva</p>
-</footer>
+<footer>© 2026 Wallace Lopes</footer>
 
 <script src="script.js"></script>
 </body>
